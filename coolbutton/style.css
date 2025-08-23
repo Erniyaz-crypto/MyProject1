@@ -1,0 +1,64 @@
+* {
+  font-family: Poppins;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #29292b;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 1em 2em;
+  font-size: 3em;
+  border-radius: 10px;
+  border: none;
+  background-color: #006fde;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  color: white; /* make text visible */
+  z-index: 1; /* text stays above ::after */
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(233, 233, 83);
+  height: 100%;
+  width: 50%;
+  inset: 0;
+  left: -500px;
+  border-radius: 10px 0 0 10px;
+  z-index: -1; /* send it behind the text */
+  transition: all 0.5s ease-in-out;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(233, 233, 83);
+  height: 100%;
+  width: 50%;
+  inset: 0;
+  left: 500px;
+  border-radius: 0 10px 10px 0;
+  z-index: -1; /* send it behind the text */
+  transition: all 0.5s ease-in-out;
+}
+
+.button:hover::after {
+  left: 0;
+}
+.button:hover::before {
+  left: 50%;
+}
+
+.button:hover {
+  color: black;
+}
