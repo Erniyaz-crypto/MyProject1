@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+
+.card {
+  height: 450px;
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 3px rgb(171, 171, 171);
+}
+
+.header {
+  height: 100px;
+  background-image: linear-gradient(to right, #5353ff, #c742e5);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.input {
+  width: 80%;
+  height: 45px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  border: 1px solid rgb(168, 165, 165);
+  padding-left: 17px;
+  outline: none;
+}
+
+.checkbox a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #3838ee;
+}
+.checkbox {
+  margin-top: -10px;
+}
+.checkbox a:hover {
+  text-decoration: underline;
+}
+.input-section {
+  text-align: center;
+  margin-top: 29px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+}
+
+.login-btn {
+  margin-top: 20px;
+  width: 80%;
+  height: 45px;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+.login-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, #5353ff, #c742e5);
+  z-index: -1;
+  transition: 0.5s ease;
+}
+.login-btn:hover::after {
+  box-shadow: 0 0 30px 1px #5353ffae, 0 0 25px #c742e5a1;
+}
+
+.input-section p {
+  margin-top: 30px;
+}
+
+.sign {
+  text-decoration: none;
+  color: #3838ee;
+}
+.sign:hover {
+  text-decoration: underline;
+}
